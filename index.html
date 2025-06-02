@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Formatter</title>
+  <style>
+    
+    #container{
+      max-width: 800px;
+      padding: 20px;
+      margin: 10px;
+      background-color: khaki;
+    }
+    input, button{
+      padding: 20px;
+      margin: 10px;
+    }
+    #messageBox{
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <input type="text" id="inputText" placeholder="Enter Text">
+    <br>
+    <button id="btn">Format</button>
+    <div id="messageBox"></div>
+  </div>
+  
+
+  <script>
+    const button = document.getElementById('btn');
+    const msgDiv = document.getElementById('messageBox');
+    const inputBox = document.getElementById('inputText');
+    
+    function displayText(){
+      const inputBox = document.getElementById('inputText');
+      const newElement = document.createElement('h1')
+      newElement.innerHTML = inputBox
+    }
+    
+    button.addEventListener('click', displayText())
+  </script>
+</body>
+</html>
